@@ -260,3 +260,15 @@
     label: "{{ item.name }}"
   when:
     - item.dateyesterday is defined
+
+- name: assert | Test olddir in logrotate_entries
+  ansible.builtin.assert:
+    that:
+      - item.olddir is string
+      - item.olddir is not none
+    quiet: true
+  loop: "{{ logrotate_entries }}"
+  loop_control:
+    label: "{{ item.name }}"
+  when:
+    - item.olddir is defined

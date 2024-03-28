@@ -32,6 +32,8 @@
 
 {% if item.dateyesterday is defined and item.dateyesterday %}    dateyesterday{% endif %}
 
+{% if item.olddir is defined and item.olddir %}    olddir {{ item.olddir }}{% endif %}
+
 {% if item.postrotate is defined %}    postrotate
         {{ item.postrotate }}
     endscript{% endif %}

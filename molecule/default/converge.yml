@@ -68,6 +68,8 @@
       - name: example-dateyesterday
         path: "/var/log/example-dateyesterday/*.log"
         dateyesterday: true
+      - name: example-olddir
+        path: "/var/log/example-olddir/*.log"
 
   roles:
     - role: ansible-role-logrotate
